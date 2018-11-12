@@ -1,28 +1,3 @@
-# ChatRoom
-chatroom project for Intro to Software Enginnering course.
-the ChatRoom software uses the Multitier architecture model.
-in the project we experienced full software development cycle from, client requirements to high-level design to low-level design to creating the software, we had to deal with sudden changes in the software according to the client needs and use testing methodologies to test our software.
-
-the software used the 4 layer architecture:
-
-Presentation layer- the GUI of the sofware
-
-Application layer- the massanger between the Presentation layer and the Logic layer uses MVVM architecture pattern
-
-Business layer- incharge of all the logics behind the scenes of the software and accessing the Data access layer
-
-Data access layer- data layer which stores all the logs of the software and the code that wrote all the data to the SQL data base 
-that was used in the project
-
-# Milestones:
-
-the project was divided into 3 milestones 
-
-## Milestone 1:
-### General
-In this milestone, you are requested to implement a CLI desktop client for a chatroom. Your client will connect and communicate with a server that we have deployed for you. Your client will retrieve messages from the server, display and write messages, and handle users login and registration. Your client will have three layers constructed by you - presentation layer (CLI), logic layer, and persistent layer. In addition we will supply a communication layer for your client in order to communicate with the server.
-
-### Requirements
 1. User is identified by:
 	a. A group ID, which is set in the 
 	b. A nickname, which must be unique in a group.
