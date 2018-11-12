@@ -23,19 +23,19 @@ Requirements
 1. User is identified by:
 
 
-a. A group ID, which is set in the 
+  a. A group ID, which is set in the 
 
-b. A nickname, which must be unique in a group.
+  b. A nickname, which must be unique in a group.
 
 2. A message received by the server has the following attributes (besides the message itself):
 
-a. A unique identifier (called GUID, global unique identifier).
+  a. A unique identifier (called GUID, global unique identifier).
 
-b. The time that it was received by the server.
+  b. The time that it was received by the server.
 
-c. The user information.
+  c. The user information.
 
-d. The message body.
+  d. The message body.
 
 Functional Requirements
 
