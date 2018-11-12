@@ -15,85 +15,13 @@ Data access layer- data layer which stores all the logs of the software and the 
 
 the project was divided into 3 milestones
 ### Milestone 1:
-General
 
 In this milestone, you are requested to implement a CLI desktop client for a chatroom. Your client will connect and communicate with a server that we have deployed for you. Your client will retrieve messages from the server, display and write messages, and handle users login and registration. Your client will have three layers constructed by you - presentation layer (CLI), logic layer, and persistent layer. In addition we will supply a communication layer for your client in order to communicate with the server.
-Requirements
 
-1. User is identified by:
+### Milestone 2:
 
+After the success of the first milestone, you are now requested to further expand the functionality of your chat-room client. After using your chat room client for several months your clients complain that interactions with your client are too cumbersome (difficult). To improve this, they ask you to build a pretty graphical user interface (GUI) for it. This interface should support all of the existing functionality (with some changes, see below). Additionally, the client will automatically pull new messages, update the view, and support filtering and sorting the messages. You and your team are tasked to upgrade your current chat-room client and generate a new version that supports these new demands.
 
-  a. A group ID, which is set in the 
+### Milestone 3:
 
-  b. A nickname, which must be unique in a group.
-
-2. A message received by the server has the following attributes (besides the message itself):
-
-  a. A unique identifier (called GUID, global unique identifier).
-
-  b. The time that it was received by the server.
-
-  c. The user information.
-
-  d. The message body.
-
-Functional Requirements
-
-1. A client command-line interface (CLI) that will support the following operations:
-
-a. Registration.
-
-b. Login/Logout.
-
-c. Retrieve last 10 messages from server.
-
-d. Display last 20 retrieved messages (without retrieving new ones from the server), sorted by the message timestamp.
-
-e.Display all retrieved messages (without retrieving new ones from the server) written by a certain user (identified by a 
-username and a group id), sorted by the message timestamp.
-
-f. Write (and send) a new message (max. Length 150 characters).
-
-g. Exit (logout first).
-
-2. Messages displayed on screen should include all message details received from the server.
-
-Non-functional Requirements
-
-1. Persistency:
-
-a. In this assignment, persistent data is stored in local files.
-
-b. The following data should be persistent:
-
-i.Users data.
-
-ii. Received messages (including messages returned by calling Communication.Instance.Send(), see below.
-
-c. Persistent data should be restored once the CLI client starts.
-
-2.Logging:
-
-You must maintain a log which will track all errors in the system. Note that “error” does not necessarily mean an exception (see 
-next item) that is “thrown” or “raised” by your runtime environment, but any situation which counts as invalid in our domain. 
-Some guidelines:
-
-a. Tag entries with their severity / priority
-
-b. Provide enough information to understand what went wrong, and where
-
-c. Avoid storing entire stack traces directly in the log (they are more verbose than useful)
-
-d. Use a shelf Logger. Some
-
-examples:
-
-log4net, Observer logger, Composition Logger, end there are many more.
-
-3. Exception Handling is the process of responding to the occurrence, during computation, of exceptions – anomalous or 
-exceptional conditions requiring special processing – often changing the normal flow of program execution. Your program is 
-expected to operate even when error occurs:
-
-a. Handle any malformed input.
-
-b. Handle logic errors (e.g., login for non-existing user, etc.).
+The last two versions of your Chatroom client was successful and your users are satisfied, though they wish to retrieve messages that were sent while they were offline. Recently, there has been an upgrade to the server and you must adapt your client to comply with these changes, as well as to take advantage of the new capabilities that the server is now providing. The upgrade replaced the former python server and replaced it with a central SQL server. The server stores the users and messages details, and allows for viewing and manipulating the its data. To put in plainly, your client’s communication layer is no longer needed. In addition, your data access layer will read/write users and messages from/to the central SQL server (instead of keeping them in files). This milestone adds some new and exciting functionalities to your Chatroom Client to make it more appealing.
